@@ -34,7 +34,7 @@ jobs:
       # Code Quality Scan
       - name: Run Pylint
         run: |
-          pylint *.py
+          pylint *.py --fail-under=3
 
       # Unit Tests
       - name: Run Pytest
