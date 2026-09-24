@@ -39,7 +39,7 @@ jobs:
       # Unit Tests
       - name: Run Pytest
         run: |
-          pytest test_app/ -v
+          pytest test_app.py/ -v
 
       # Dependency Vulnerability Scan
       - name: Safety Scan
