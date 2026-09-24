@@ -23,7 +23,7 @@ jobs:
       # Install application dependencies
       - name: Install Dependencies
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip setuptools
           pip install -r requirements.txt
 
       # Install CI tools
@@ -44,7 +44,7 @@ jobs:
       # Dependency Vulnerability Scan
       - name: Safety Scan
         run: |
-          safety check
+          safety scan -r requirements-lock.txt
 
       # Build Docker Image
       - name: Build Docker Image
