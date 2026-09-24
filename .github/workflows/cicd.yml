@@ -44,7 +44,7 @@ jobs:
       # Dependency Vulnerability Scan
       - name: Safety Scan
         run: |
-          safety check -r requirements-lock.txt
+          safety check -r requirements.txt
 
       # Build Docker Image
       - name: Build Docker Image
